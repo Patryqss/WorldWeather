@@ -1,0 +1,151 @@
+@font-face {
+  font-family: GodOfThunder;
+  src: url(Godofthunder.ttf);
+}
+
+body {
+  min-height: 100vh;
+  background: url(https://wallpapercave.com/wp/oWfnrb6.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 1.5vmin);
+  font-weight: 400;
+  color: #111d5e;
+}
+
+/* Form & info section */
+.logo {
+  font-family: GodOfThunder;
+  font-size: 6vw;
+  margin: 0;
+}
+
+form,
+.intro {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+input {
+  height: 1em;
+}
+
+.button {
+  height: 1.5em;
+  width: 4em;
+  box-shadow: 0px 0px 0px 2px #9fb4f2;
+  background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+  background-color: #7892c2;
+  border-radius: 10px;
+  border: 1px solid #4e6096;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #283966;
+  margin-left: 10px;
+}
+.button:hover {
+  background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+  background-color: #476e9e;
+}
+
+/* Forecast section */
+.forecast {
+  width: 100%;
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.forecastInfo {
+  max-height: 4vh;
+}
+
+.forecastDayGroup {
+  background-color: #224f83;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  column-gap: 2vw;
+  border: 4px #355e8e solid;
+  border-radius: 5px;
+  opacity: 90%;
+  color: white;
+}
+
+.firstGroup {
+  display: grid;
+  grid-column: span 5;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.secondGroup {
+  display: grid;
+  grid-column: span 2;
+  grid-template-columns: 5fr 1fr;
+}
+
+/* Types of fields in forecast section */
+.arrow {
+  grid-column: span 3;
+}
+
+.leftarrow {
+  justify-self: right;
+}
+
+.rightarrow {
+  justify-self: left;
+}
+
+.date {
+  font-weight: bold;
+  font-size: calc(10px + 1.5vmin);
+}
+
+.fMain {
+  grid-column: span 6;
+  font-size: xx-large;
+}
+
+.fType {
+  font-weight: bold;
+}
+
+.fData {
+  font-style: italic;
+}
+
+.fSky {
+  grid-column: span 2;
+}
+
+.fHum {
+  margin-right: 20%;
+}
+
+/* Mobile */
+@media all and (max-width: 600px) {
+  .firstGroup,
+  .secondGroup {
+    grid-column: span 7;
+  }
+
+  .fHum {
+    grid-column: span 2;
+    margin-right: 0;
+  }
+}
